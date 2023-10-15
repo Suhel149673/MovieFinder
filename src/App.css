@@ -1,38 +1,85 @@
-.App {
+/* @use postcss-cssnext; */
+
+body {
+  background-color: #1e2931;
+  color: #fff;
+  font-family: Verdana, sans-serif;
+  font-style: normal;
+  line-height: 1.5;
+  margin: 0 auto;
+  width: 90%;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+input {
+  border: 0;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.search {
+  font-size: 1.5rem;
+  margin: 1.5em auto 3em;
+  max-width: 80%;
+}
+
+.search [type='search'] {
+  background-color: #ffffff;
+  color: #898F9C;
+  padding: 0.5em 2em;
   text-align: center;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.movies {
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: repeat(auto-fill, minmax(10em, 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.movies > li {
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
+}
+
+.movie:hover{
+  .movie__title{
+    visibility: inherit;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.movie figcaption {
+  padding: 1em;
 }
 
-.App-link {
-  color: #61dafb;
+.movie__title {
+  font-size: 1rem;
+  font-weight: normal;
+  font-variant: small-caps;
+  margin: 0;
+  visibility: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+.footer {
+  background-color: black;
+  color: gray;
+  line-height: 20px;
+  padding-top: 20px;
+  padding-bottom: 6px;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  font-family: Sans-serif;
+}  
